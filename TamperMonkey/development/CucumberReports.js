@@ -59,6 +59,7 @@ function colorCucumberTags() {
 	//Val
 	qa = 'Val';
 	colorCucumberTagForQA('@Notification', qa);
+	colorCucumberTagForQA('@AdministrationActivite', qa);
 	colorCucumberTagForQA('@RendezVous', qa);
 	colorCucumberTagForQA('SalleAttente', qa);
 	colorCucumberTagForQA('@RecherchePatient', qa);
