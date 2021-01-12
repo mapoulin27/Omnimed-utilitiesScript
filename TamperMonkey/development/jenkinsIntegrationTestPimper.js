@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         Jenkins Integration Test List Pimper
 // @namespace    http://tampermonkey.net/
-// @version      3.0
+// @version      4.1
 // @description  Jenkins Integration Test List Pimper
 // @author       mcormier
-// @match        https://jenkins.omnimed.com/*/job/*/job/*/*/
+// @match        https://jenkins.omnimed.com/*/job/*/*/
 // @grant        none
 // ==/UserScript==
 function openAllFailedTest() {
@@ -52,10 +52,10 @@ function buildNewPage(element,nbCuke,nbIT,tagList){
     var result = tagList.reduce((r,c) => (r[c] = (r[c] || 0) + 1, r), {});
     var tagsArray = [];
     for (var tag in result){
-      tagsArray.push([tag + " : " + result[tag]] + "<br />")
+      tagsArray.push(["" +tag + " : " + result[tag]] + "<br />")
     }
     var parent = element.offsetParent
-    parent.outerHTML = parent.outerHTML.replace(")", ")<br /><br /></a><b>" + nbCuke + " cukes en erreur :</b><br />- @" + tagsArray.join('- @') + "<br /><b>" + nbIT + " tests d'intégrations en erreur :</b> <br />" );
+    parent.outerHTML = parent.outerHTML.replace(")", ")<br /><br /></a><b>" + nbCuke + " cukes en erreur :</b><br /> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp@" + tagsArray.join('&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp@') + "<br /><b>" + nbIT + " tests d'intégrations en erreur :</b> <br />" );
 }
 
 function deleteCukeFromList(element) {
