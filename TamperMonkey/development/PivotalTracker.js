@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Pivotal Tracker Enhanced
 // @namespace    https://www.pivotaltracker.com/
-// @version      0.56
+// @version      0.57
 // @description  Pivotal Tracker enhanced for Omnimed
 // @author       Omnimed
 // @match        https://www.pivotaltracker.com/*
@@ -29,10 +29,10 @@ function capitalizeFirstLetter(string) {
 
 $(function() {
     $("head").append("<style id='omnimedStyles' type='text/css'>\n"
-        + ".devopsIcon:before{ background-image:url(https://raw.githubusercontent.com/Omnimed/Omnimed-utilitiesScript/master/TamperMonkey/image/devops.png) !important;}"
-        + ".analyseIcon:before{ background-image:url(https://raw.githubusercontent.com/Omnimed/Omnimed-utilitiesScript/master/TamperMonkey/image/analyse.png) !important;}"
-        + ".shadowIcon:before{ background-image:url(https://raw.githubusercontent.com/Omnimed/Omnimed-utilitiesScript/master/TamperMonkey/image/shadow.png) !important;}"
-        + ".onAirIcon:before{ background-image:url(https://raw.githubusercontent.com/Omnimed/Omnimed-utilitiesScript/master/TamperMonkey/image/onair.png) !important;}"
+        + ".devopsIcon{ background-image:url(https://raw.githubusercontent.com/Omnimed/Omnimed-utilitiesScript/master/TamperMonkey/image/devops.png) !important;}"
+        + ".analyseIcon{ background-image:url(https://raw.githubusercontent.com/Omnimed/Omnimed-utilitiesScript/master/TamperMonkey/image/analyse.png) !important;}"
+        + ".shadowIcon{ background-image:url(https://raw.githubusercontent.com/Omnimed/Omnimed-utilitiesScript/master/TamperMonkey/image/shadow.png) !important;}"
+        + ".onAirIcon{ background-image:url(https://raw.githubusercontent.com/Omnimed/Omnimed-utilitiesScript/master/TamperMonkey/image/onair.png) !important;}"
         + ".invalidStory .preview { background-color: #fb9595 !important;}"
         + ".labelNeed { background-color: #4d5258 !important; color: white !important; border-radius: 5px ; padding: 0px 5px 0px 5px; margin-right: 2px; }"
         + ".labelMustHave { background-color: #cc0000 !important; color: white !important; border-radius: 5px ; padding: 0px 5px 0px 5px; margin-right: 2px; }"
@@ -43,10 +43,10 @@ $(function() {
 });
 
 function updateIcons() {
-    $('.feature .labels:has(a:contains("onair"))').parentsUntil('.story').find('span.meta').addClass('onAirIcon')
-    $('.feature .labels:has(a:contains("devops"))').parentsUntil('.story').find('span.meta').addClass('devopsIcon');
-    $('.feature .labels:has(a:contains("analyse"))').parentsUntil('.story').find('span.meta').addClass('analyseIcon');
-    $('.feature .labels:has(a:contains("shadow"))').parentsUntil('.story').find('span.meta').addClass('shadowIcon');
+    $('.feature .labels:has(a:contains("onair"))').parentsUntil('.story').find('span.StoryPreviewItem__storyType___sBjDnL7T').addClass('onAirIcon')
+    $('.feature .labels:has(a:contains("devops"))').parentsUntil('.story').find('span.StoryPreviewItem__storyType___sBjDnL7T').addClass('devopsIcon');
+    $('.feature .labels:has(a:contains("analyse"))').parentsUntil('.story').find('span.StoryPreviewItem__storyType___sBjDnL7T').addClass('analyseIcon');
+    $('.feature .labels:has(a:contains("shadow"))').parentsUntil('.story').find('span.StoryPreviewItem__storyType___sBjDnL7T').addClass('shadowIcon');
 }
 
 function updateFlyoverIcons() {
