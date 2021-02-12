@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Pivotal Tracker Enhanced
 // @namespace    https://www.pivotaltracker.com/
-// @version      0.57
+// @version      0.58
 // @description  Pivotal Tracker enhanced for Omnimed
 // @author       Omnimed
 // @match        https://www.pivotaltracker.com/*
@@ -37,6 +37,7 @@ $(function() {
         + ".labelNeed { background-color: #4d5258 !important; color: white !important; border-radius: 5px ; padding: 0px 5px 0px 5px; margin-right: 2px; }"
         + ".labelMustHave { background-color: #cc0000 !important; color: white !important; border-radius: 5px ; padding: 0px 5px 0px 5px; margin-right: 2px; }"
         + ".labelShouldHave { background-color: #f0ab00 !important; color: white !important; border-radius: 5px ; padding: 0px 5px 0px 5px; margin-right: 2px;}"
+        + ".labelNiceToHave { background-color: #e1d414 !important; color: white !important; border-radius: 5px ; padding: 0px 5px 0px 5px; margin-right: 2px; }"
         + ".labelCouldHave { background-color: #0088ce !important; color: white !important; border-radius: 5px ; padding: 0px 5px 0px 5px; margin-right: 2px; }"
         + ".labelFeatureBranch { background-color: #000000!important; color: white !important; border-radius: 10px ; padding: 0px 5px 0px 5px; margin-right: 2px; }"
         + "\n</style>")
@@ -126,6 +127,7 @@ function highlightLabels() {
     $("a.label:contains('besoin')").addClass('labelNeed');
     $("a.label:contains('should have')").addClass('labelShouldHave');
     $("a.label:contains('must have')").addClass('labelMustHave');
+    $("a.label:contains('nice to have')").addClass('labelNiceToHave');
     $("a.label:contains('could have')").addClass('labelCouldHave');
     $("a.label:contains('feature-')").addClass('labelFeatureBranch');
 }
