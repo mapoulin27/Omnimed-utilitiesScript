@@ -4,7 +4,7 @@
 // @version      0.2
 // @description  try to take over the world!
 // @author       You
-// @match        https://cloud.dev.omnimed.com/frontend-private-billing/privee
+// @match        https://cloud.dev.omnimed.com/frontendphp-private-billing/privee
 // @grant        none
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
 // ==/UserScript==
