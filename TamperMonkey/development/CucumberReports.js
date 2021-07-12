@@ -1,17 +1,17 @@
 // ==UserScript==
 // @name         Cucumber pimper
 // @namespace    http://tampermonkey.net/
-// @version      4.1
+// @version      5
 // @description  Pimp cucumber reports
 // @author       mquiron, mcormier, nguillet, shenault, marobert
 // @match        https://jenkins.omnimed.com/*job/*/cucumber-html-reports/*overview-tags.html
 // @grant        none
 // ==/UserScript==
 $(document).ready(function() {
-	$("<style type='text/css'> .cukeMorc { background-color: black !important; color: white !important; } </style>").appendTo("head");
+	$("<style type='text/css'> .cukeLouis { background-color: black !important; color: white !important; } </style>").appendTo("head");
 	$("<style type='text/css'> .cukeNic { background-color: red !important; color: white !important; } </style>").appendTo("head");
 	$("<style type='text/css'> .cukeVal { background-color: blue !important; color: white !important; } </style>").appendTo("head");
-	$("<style type='text/css'> .cukeMad { background-color: green !important; color: white !important; } </style>").appendTo("head");
+	$("<style type='text/css'> .cukeRob { background-color: green !important; color: white !important; } </style>").appendTo("head");
 	$("<style type='text/css'> .cukeAll { background-color: grey !important; color: white !important; } </style>").appendTo("head");
 });
 
@@ -82,15 +82,8 @@ function colorCucumberTags() {
 	colorCucumberTagForQA('@ExpirationSession', qa);
 	//----SessionOnimed----
 
-	//Moc
-	qa = 'Morc';
-	colorCucumberTagForQA('@AdministrationActivite', qa);
-	colorCucumberTagForQA('@AdministrationStatut', qa);
-	colorCucumberTagForQA('@AdministrationVisioconférence', qa);
-	colorCucumberTagForQA('@CentreAdmin', qa);
-	colorCucumberTagForQA('@RecherchePatient', qa);
-	colorCucumberTagForQA('RendezVous', qa);
-	colorCucumberTagForQA('SalleAttente', qa);
+	//Louis
+	qa = 'Louis';
 	colorCucumberTagForQA('@DossierAllergie', qa);
 	colorCucumberTagForQA('@DossierActionLogAllergie', qa);
 	colorCucumberTagForQA('@DossierImmunisation', qa);
@@ -98,7 +91,18 @@ function colorCucumberTags() {
 	colorCucumberTagForQA('@DsqSqim', qa);
 	colorCucumberTagForQA('ActionLogImmunisation', qa);
 	colorCucumberTagForQA('Medication', qa);
-	colorCucumberTagForQA('Omnidesk', qa);
+    colorCucumberTagForQA('Courriel', qa);
+
+    //Rob
+	qa = 'Rob';
+    colorCucumberTagForQA('@AdministrationActivite', qa);
+	colorCucumberTagForQA('@AdministrationStatut', qa);
+	colorCucumberTagForQA('@AdministrationVisioconférence', qa);
+	colorCucumberTagForQA('@CentreAdmin', qa);
+	colorCucumberTagForQA('@RecherchePatient', qa);
+	colorCucumberTagForQA('RendezVous', qa);
+	colorCucumberTagForQA('SalleAttente', qa);
+    colorCucumberTagForQA('Omnidesk', qa);
 
 	//All
 	qa = 'All'
