@@ -1,15 +1,15 @@
 // ==UserScript==
 // @name         Cucumber pimper
 // @namespace    http://tampermonkey.net/
-// @version      5
+// @version      6
 // @description  Pimp cucumber reports
 // @author       mquiron, mcormier, nguillet, shenault, marobert
 // @match        https://jenkins.omnimed.com/*job/*/cucumber-html-reports/*overview-tags.html
 // @grant        none
 // ==/UserScript==
 $(document).ready(function() {
-	$("<style type='text/css'> .cukeLouis { background-color: black !important; color: white !important; } </style>").appendTo("head");
-	$("<style type='text/css'> .cukeNic { background-color: red !important; color: white !important; } </style>").appendTo("head");
+	$("<style type='text/css'> .cukeGab { background-color: black !important; color: white !important; } </style>").appendTo("head");
+	$("<style type='text/css'> .cukeValF { background-color: red !important; color: white !important; } </style>").appendTo("head");
 	$("<style type='text/css'> .cukeVal { background-color: blue !important; color: white !important; } </style>").appendTo("head");
 	$("<style type='text/css'> .cukeRob { background-color: green !important; color: white !important; } </style>").appendTo("head");
 	$("<style type='text/css'> .cukeAll { background-color: grey !important; color: white !important; } </style>").appendTo("head");
@@ -30,8 +30,9 @@ function colorCucumberTags() {
 	//Val
 	qa = 'Val';
 	//----global---- //doit etre avant tous les tags specifiques des autres QA
-	colorCucumberTagForQA('@Dossier', qa);
+	colorCucumberTagForQA('Dossier', qa);
 	//----global---- //
+    	colorCucumberTagForQA('ActionLog', qa);
 	colorCucumberTagForQA('Antecedent', qa);
 	colorCucumberTagForQA('AviseurHpn', qa);
 	colorCucumberTagForQA('Cnesst', qa);
@@ -41,7 +42,7 @@ function colorCucumberTags() {
 	colorCucumberTagForQA('MaladieChronique', qa);
 	colorCucumberTagForQA('Note', qa);
 	colorCucumberTagForQA('@Notification', qa);
-	colorCucumberTagForQA('@OCAngular', qa);
+	colorCucumberTagForQA('OCAngular', qa);
 	colorCucumberTagForQA('Outil', qa);
 	colorCucumberTagForQA('Probleme', qa);
 	colorCucumberTagForQA('Dictionnaire', qa);
@@ -54,7 +55,7 @@ function colorCucumberTags() {
 	colorCucumberTagForQA('Vitaux', qa);
 
 	//Nic
-	qa = 'Nic';
+	qa = 'ValF';
 	colorCucumberTagForQA('@Aide', qa);
 	colorCucumberTagForQA('Contact', qa);
 	colorCucumberTagForQA('Document', qa);
@@ -64,7 +65,7 @@ function colorCucumberTags() {
 	//----Introduction----
 	colorCucumberTagForQA('@Nouvelle', qa);
 	colorCucumberTagForQA('@MenuOmnimed', qa);
-	colorCucumberTagForQA('@Profil', qa);
+	colorCucumberTagForQA('Profil', qa);
 	//----Introduction----
 	colorCucumberTagForQA('Requete', qa);
 	//----Resultat----
@@ -83,7 +84,7 @@ function colorCucumberTags() {
 	//----SessionOnimed----
 
 	//Louis
-	qa = 'Louis';
+	qa = 'Gab';
 	colorCucumberTagForQA('@DossierAllergie', qa);
 	colorCucumberTagForQA('@DossierActionLogAllergie', qa);
 	colorCucumberTagForQA('@DossierImmunisation', qa);
@@ -91,18 +92,20 @@ function colorCucumberTags() {
 	colorCucumberTagForQA('@DsqSqim', qa);
 	colorCucumberTagForQA('ActionLogImmunisation', qa);
 	colorCucumberTagForQA('Medication', qa);
-    colorCucumberTagForQA('Courriel', qa);
+    	colorCucumberTagForQA('Courriel', qa);
 
     //Rob
 	qa = 'Rob';
-    colorCucumberTagForQA('@AdministrationActivite', qa);
-	colorCucumberTagForQA('@AdministrationStatut', qa);
-	colorCucumberTagForQA('@AdministrationVisioconférence', qa);
+    	colorCucumberTagForQA('AdministrationActivite', qa);
+	colorCucumberTagForQA('AdministrationStatut', qa);
+	colorCucumberTagForQA('AdministrationVisio', qa);
 	colorCucumberTagForQA('@CentreAdmin', qa);
+    	colorCucumberTagForQA('CentreTransmission', qa);
+    	colorCucumberTagForQA('CommunicationPatient', qa);
 	colorCucumberTagForQA('@RecherchePatient', qa);
 	colorCucumberTagForQA('RendezVous', qa);
 	colorCucumberTagForQA('SalleAttente', qa);
-    colorCucumberTagForQA('Omnidesk', qa);
+    	colorCucumberTagForQA('Omnidesk', qa);
 
 	//All
 	qa = 'All'
