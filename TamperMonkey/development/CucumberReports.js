@@ -54,7 +54,7 @@ function colorCucumberTags() {
 	//----Securite----
 	colorCucumberTagForQA('Vitaux', qa);
 
-	//Nic
+	//ValF
 	qa = 'ValF';
 	colorCucumberTagForQA('@Aide', qa);
 	colorCucumberTagForQA('Contact', qa);
@@ -83,7 +83,7 @@ function colorCucumberTags() {
 	colorCucumberTagForQA('@ExpirationSession', qa);
 	//----SessionOnimed----
 
-	//Louis
+	//Gab
 	qa = 'Gab';
 	colorCucumberTagForQA('@DossierAllergie', qa);
 	colorCucumberTagForQA('@DossierActionLogAllergie', qa);
@@ -93,6 +93,7 @@ function colorCucumberTags() {
 	colorCucumberTagForQA('ActionLogImmunisation', qa);
 	colorCucumberTagForQA('Medication', qa);
     	colorCucumberTagForQA('Courriel', qa);
+	colorCucumberTagForQA('@UFaxer', qa);
 
     //Rob
 	qa = 'Rob';
