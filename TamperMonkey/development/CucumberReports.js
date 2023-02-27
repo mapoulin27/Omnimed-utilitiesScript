@@ -10,9 +10,9 @@
 $(document).ready(function() {
 	$("<style type='text/css'> .cukeDos { background-color: blue !important; color: white !important; } </style>").appendTo("head");
 	$("<style type='text/css'> .cukeMed { background-color: black !important; color: white !important; } </style>").appendTo("head");
-	$("<style type='text/css'> .cukeReq { background-color: darkseagreen !important; color: white !important; } </style>").appendTo("head");
+	$("<style type='text/css'> .cukeReq { background-color: red !important; color: white !important; } </style>").appendTo("head");
 	$("<style type='text/css'> .cukeMad { background-color: green !important; color: white !important; } </style>").appendTo("head");
-	$("<style type='text/css'> .cukeInt { background-color: red !important; color: white !important; } </style>").appendTo("head");
+	$("<style type='text/css'> .cukeInt { background-color: darkred !important; color: white !important; } </style>").appendTo("head");
 	$("<style type='text/css'> .cukeAll { background-color: grey !important; color: white !important; } </style>").appendTo("head");
 });
 
@@ -60,25 +60,10 @@ function colorCucumberTags() {
 
 	//Équipe Requetes et resultats
 	qa = 'Req';
-	colorCucumberTagForQA('@Aide', qa);
-	colorCucumberTagForQA('Contact', qa);
-	colorCucumberTagForQA('Courriel', qa);
-	colorCucumberTagForQA('Sms', qa);
-	//----Introduction----
-	colorCucumberTagForQA('@Nouvelle', qa);
-	colorCucumberTagForQA('@MenuOmnimed', qa);
-	colorCucumberTagForQA('@Profil', qa);
-	colorCucumberTagForQA('@UProfil', qa);
-	colorCucumberTagForQA('@IProfil', qa);
-	//----Introduction----
 	colorCucumberTagForQA('Requete', qa);
-	colorCucumberTagForQA('Conclusion', qa);
-	//----Resultat----
 	colorCucumberTagForQA('@DossierResultat', qa);
 	colorCucumberTagForQA('@DossierActionLogResultat', qa);
 	colorCucumberTagForQA('RevisionResultat', qa);
-	//----Resultat----
-	colorCucumberTagForQA('Tache', qa);
 
 	//Équipe Médico admin
 	qa = 'Mad';
@@ -91,6 +76,14 @@ function colorCucumberTags() {
 	colorCucumberTagForQA('RendezVous', qa);
 	colorCucumberTagForQA('SalleAttente', qa);
 	colorCucumberTagForQA('Omnidesk', qa);
+	colorCucumberTagForQA('@Aide', qa);
+	colorCucumberTagForQA('Contact', qa);
+	colorCucumberTagForQA('Courriel', qa);
+	colorCucumberTagForQA('Sms', qa);
+	colorCucumberTagForQA('Tache', qa);
+	colorCucumberTagForQA('@Nouvelle', qa);
+	colorCucumberTagForQA('@MenuOmnimed', qa);
+	colorCucumberTagForQA('Conclusion', qa);
 
 	//Équipe Médication
 	qa = 'Med';
@@ -108,6 +101,9 @@ function colorCucumberTags() {
 	colorCucumberTagForQA('PrescribeIt', qa);
 	colorCucumberTagForQA('CentreTransmission', qa);
 	colorCucumberTagForQA('TransmissionDashboard', qa);
+	colorCucumberTagForQA('@Profil', qa);
+	colorCucumberTagForQA('@UProfil', qa);
+	colorCucumberTagForQA('@IProfil', qa);
 
 	//Équipe Intégration
 	qa = 'Int';
@@ -115,8 +111,6 @@ function colorCucumberTags() {
 	colorCucumberTagForQA('@Authentification', qa);
 	colorCucumberTagForQA('@ExpirationSession', qa);
 	colorCucumberTagForQA('@Compte', qa);
-	//----SessionOnimed----
-	colorCucumberTagForQA('Umf', qa);
 
 	//All
 	qa = 'All'
