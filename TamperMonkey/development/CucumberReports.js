@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Cucumber pimper
 // @namespace    http://tampermonkey.net/
-// @version      7.5
+// @version      7.6
 // @description  Pimp cucumber reports
 // @author       mquiron, mcormier, nguillet, shenault, marobert
 // @match        https://jenkins.omnimed.com/*job/*/cucumber-html-reports/*overview-tags.html
@@ -66,6 +66,7 @@ function colorCucumberTags() {
 	colorCucumberTagForQA('@DossierResultat', qa);
 	colorCucumberTagForQA('@DossierActionLogResultat', qa);
 	colorCucumberTagForQA('RevisionResultat', qa);
+	colorCucumberTagForQA('CourrielResultat', qa);
 
 	//Équipe Médico admin
 	qa = 'Mad';
@@ -78,6 +79,7 @@ function colorCucumberTags() {
 	colorCucumberTagForQA('RendezVous', qa);
 	colorCucumberTagForQA('SalleAttente', qa);
 	colorCucumberTagForQA('PortailPatient', qa);
+	colorCucumberTagForQA('PwaElna', qa);
 	colorCucumberTagForQA('Omnidesk', qa);
 	colorCucumberTagForQA('@Aide', qa);
 	colorCucumberTagForQA('Contact', qa);
