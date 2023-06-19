@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Cucumber pimper
 // @namespace    http://tampermonkey.net/
-// @version      7.6
+// @version      7.7
 // @description  Pimp cucumber reports
 // @author       mquiron, mcormier, nguillet, shenault, marobert
 // @match        https://jenkins.omnimed.com/*job/*/cucumber-html-reports/*overview-tags.html
@@ -47,7 +47,6 @@ function colorCucumberTags() {
 	colorCucumberTagForQA('Note', qa);
 	colorCucumberTagForQA('@Notification', qa);
 	colorCucumberTagForQA('OCAngular', qa);
-	colorCucumberTagForQA('Outil', qa);
 	colorCucumberTagForQA('Probleme', qa);
 	colorCucumberTagForQA('Dictionnaire', qa);
 	colorCucumberTagForQA('Programme', qa);
@@ -114,6 +113,11 @@ function colorCucumberTags() {
 	colorCucumberTagForQA('@ExpirationSession', qa);
 	colorCucumberTagForQA('@Compte', qa);
 
+	//Équipe Dossier
+    	//Pour un tag Outil qui est aussi contenu dans CentreAdmin, je dois le placer après
+    	qa = 'Dos';
+    	colorCucumberTagForQA('Outil', qa);
+	
 	//All
 	qa = 'All'
 	colorCucumberTagForQA('@CreationDonnee', qa);
