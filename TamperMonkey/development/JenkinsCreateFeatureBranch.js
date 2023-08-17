@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Jenkins create feature branch
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @author       mplante
 // @match        https://jenkins.omnimed.com/job/CreateFeatureBranch/build?delay=0sec
 // @match        https://jenkins.omnimed.com/*/job/CreateFeatureBranch/build?delay=0sec
@@ -15,7 +15,7 @@
     var currentLength = 0
     var branchNameInput = document.getElementsByName('value')[0];
     var div = document.createElement('div');
-    var maxLength = 39;
+    var maxLength = 38;
 
     branchNameInput.addEventListener("input", updateLength);
 
